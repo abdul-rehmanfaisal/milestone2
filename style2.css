@@ -1,0 +1,314 @@
+/* General body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root {
+    --bg-color: #218563;
+    --second-bg-color: #131313;
+    --text-color: rgb(0, 0, 0);
+    --main-color: #00ff2a;
+}
+html {
+    font-size: 60%;
+    overflow-x: hidden;
+}
+
+/* body {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+   
+} */
+span {
+    color: var(--main-color);
+}
+
+.text-animation {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before {
+    content: "Our Responsibility";
+    color: var(--main-color);
+    animation: words 25s infinite;
+}
+
+.text-animation span::after {
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 25s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+@keyframes words {
+    0%,
+    20% {
+        content: " your resume Will be prepared by us";
+    }
+    21%,
+    40% {
+        content: " your resume Our Responsibility";
+    }
+    /* 41%,
+    60% {
+        content: "Machine Learning";
+    }
+    41%,
+    60% {
+        content: "Front-End-Web Developer";
+    }
+    81%,
+    100% {
+        content: "NLP";
+    } */
+}
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95% {
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85% {
+        width: calc(100% + 8px);
+    }
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color); /* Slightly lighter background for a cleaner look */
+    color: #333;
+  }
+  
+  /* Main heading */
+  h1 {
+    text-align: center;
+    color: #2c3e50; /* Darker shade for better readability */
+    font-size: 2.5rem;
+    font-weight: 700; /* Bolder for emphasis */
+    margin-bottom: 40px;
+    letter-spacing: 1px; /* Reduced letter-spacing for a neater appearance */
+  }
+  
+  /* Form styling */
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for a subtle effect */
+    padding: 30px;
+    border-top: 5px solid #218563; /* Updated color for a vibrant look */
+  }
+  
+  /* Fieldset styling */
+  fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  /* Legend styling */
+  legend {
+    font-weight: 700;
+    color: #34495e; /* Slightly muted for a modern touch */
+    font-size: 1.3rem;
+    border-bottom: 2px solid #218563; /* Consistent with form border color */
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: block;
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: block;
+    color: #34495e; /* Consistent with legend color */
+  }
+  
+  /* Input and textarea styling */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 2px solid #bdc3c7; /* Light grey for a subtle border */
+    box-sizing: border-box;
+    background-color: #ecf0f1; /* Light background for inputs */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input and textarea focus effects */
+  input:focus,
+  textarea:focus {
+    border-color: #218563; /* Updated to match form border color */
+    outline: none;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.3); /* Soft glow effect */
+  }
+  
+  /* Button styling */
+  button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #218563; /* Vibrant red for attention */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 700; /* Bolder font for emphasis */
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #218563; /* Darker red for hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Resume output container styling */
+  #resumeOutput {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 2px solid #218563; /* Consistent with form and button color */
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for consistency */
+    color: #2c3e50; /* Darker color for readability */
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Resume heading styling */
+  #resumeOutput h2 {
+    text-align: center;
+    color: #2c3e50; /* Consistent with main heading color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 700; /* Bolder for emphasis */
+    letter-spacing: 1px; /* Consistent with main heading */
+  }
+  
+  /* Section titles within resume */
+  #resumeOutput h3 {
+    color: #218563; /* Consistent with form and button color */
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bdc3c7; /* Light grey for a subtle effect */
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Icon for section titles */
+  #resumeOutput h3::before {
+    content: "✧";
+    color: #218563; /* Consistent with section titles color */
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Text and content inside the resume */
+  #resumeOutput p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    line-height: 1.8;
+    color: #333; /* Darker color for readability */
+  }
+  
+  /* Styling for list items in resume (e.g., skills, experience) */
+  #resumeOutput ul {
+    padding-left: 20px;
+  }
+  
+  #resumeOutput ul li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  #resumeOutput ul li::before {
+    content: "•";
+    color: #218563; /* Consistent with list item bullets color */
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    button {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  
+    #resumeOutput {
+      padding: 20px;
+    }
+  
+    #resumeOutput h2 {
+      font-size: 1.6rem;
+    }
+  
+    #resumeOutput h3 {
+      font-size: 1.2rem;
+    }
+  
+    #resumeOutput p {
+      font-size: 1rem;
+    }
+  }
+  
